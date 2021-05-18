@@ -34,3 +34,12 @@ dot_data = tree.export_graphviz(clf_gini, out_file="DecisionTree.gv",
 
 graph = graphviz.Source(dot_data, filename="DecisionTree.gv", format="png")
 graph.view()
+
+# -----------------Predict--------------------
+
+valores = [('vhigh', 'vhigh', 2, 2, 'small', 'low')]
+columnas = ['buying', 'maint', 'doors',
+            'persons', 'lug_boot', 'safety']
+dato = pandas.DataFrame(valores, columns=columnas)
+trans = encoder.transform(dato)
+res = clf_gini.predict(trans)
