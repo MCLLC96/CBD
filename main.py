@@ -78,12 +78,12 @@ def manual_test(model, encode):
     print('PRUEBA MANUAL: ')
 
     aux = [
-        'Precio de compra (low, high, med, vhigh): ', 
-        'Precio de mantenimiento (low, high, med, vhigh): ', 
-        'Número de puertas (2, 3, 4, 5more): ', 
-        'Número de personas (2, 4, more): ', 
-        'Tamaño del maletero (small, med, big): ', 
-        'Nivel de seguridad estimado (low, high, med): ']
+        '\nPrecio de compra (low, high, med, vhigh): ', 
+        '\nPrecio de mantenimiento (low, high, med, vhigh): ', 
+        '\nNúmero de puertas (2, 3, 4, 5more): ', 
+        '\nNúmero de personas (2, 4, more): ', 
+        '\nTamaño del maletero (small, med, big): ', 
+        '\nNivel de seguridad estimado (low, high, med): ']
     
 
     aux2 = ['low, high, med, vhigh', 'low, high, med, vhigh', '2, 3, 4, 5more', '2, 4, more', 'small, med, big', 'low, high, med']
@@ -108,7 +108,7 @@ def manual_test(model, encode):
 
             else:
 
-                print('El valor introducido es incorrecto.')
+                print('\nEl valor introducido es incorrecto.')
 
 
     pred = model.predict([test])
